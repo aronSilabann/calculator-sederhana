@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>Kalkulator Sederhana</title>
+	<style type="text/css">
+		input[type="button"] {
+			width: 50px;
+			height: 50px;
+			font-size: 24px;
+			margin: 5px;
+		}
+		input[type="text"] {
+			width: 200px; 
+			height: 30px;
+			margin: 10px;
+			
+		}
+		body{
+			font-family: initial;
+			font-size: 25px;
+		}
+		
+	</style>
+</head>
+<body>
+	<script language="JavaScript" type="text/javascript">
+
+		function add() {
+			var number1 = parseFloat(document.getElementById("bil1").value);
+			var number2 = parseFloat(document.getElementById("bil2").value);
+			var hasil = number1 + number2;
+			document.getElementById("hasil").value = hasil;
+		}
+		function subtract() {
+			var number1 = parseFloat(document.getElementById("bil1").value);
+			var number2 = parseFloat(document.getElementById("bil2").value);
+			var hasil = number1 - number2;
+			document.getElementById("hasil").value = hasil;
+		}
+		function multiply() {
+			var number1 = parseFloat(document.getElementById("bil1").value);
+			var number2 = parseFloat(document.getElementById("bil2").value);
+			var hasil = number1 * number2;
+			document.getElementById("hasil").value = hasil;
+		}
+		function divide() {
+			var number1 = parseFloat(document.getElementById("bil1").value);
+			var number2 = parseFloat(document.getElementById("bil2").value);
+			var hasil = number1 / number2;
+			document.getElementById("hasil").value = hasil;
+		}
+		
+
+	</script>
+	<h1>KALKULATOR</h1>
+	<form method="POST" name="kirim" >
+		
+		<label for="bil1">bil 1 </label>
+		<input type="text" name="bil1" id="bil1" /><br>
+		<label for="bil2">bil 2 </label>
+		<input type="text" name="bil2" id="bil2" /><br>
+		<label for="hasil">hasil</label>
+		<input type="text" name="hasil" id="hasil" disabled="true"/><br>
+		
+
+		<input type="button" value="+" onclick="add()">
+		<input type="button" value="-" onclick="subtract()">
+		<input type="button" value="x" onclick="multiply()">
+		<input type="button" value="/" onclick="divide()"><br>
+
+	</form>
+</body>
+</html>
